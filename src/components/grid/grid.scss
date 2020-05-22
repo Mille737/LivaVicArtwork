@@ -1,0 +1,64 @@
+$grid-gutter: 50px;
+$spacing-kilo: 30px;
+
+.grid {
+    display: flex;
+    width: 100%;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 100%;
+        width: calc(100% + #{$grid-gutter});
+        margin-left: -$grid-gutter;
+    }
+
+    &__item {
+        padding-left: $grid-gutter;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 100%;
+
+        &--one-half {
+            width: calc(50% - #{$grid-gutter});
+        }
+
+        &--one-third {
+            width: calc(33.333% - #{$grid-gutter});
+        }
+
+        &--two-thirds {
+            width: calc(66.667% - #{$grid-gutter});
+        }
+
+        /**
+           *
+           * Use this on the first child that you want to align right and
+           * the rest will be pushed too
+           *
+           */
+
+        &--align-right {
+            margin-left: auto;
+        }
+
+        &--fill {
+            flex-grow: 1;
+        }
+    }
+
+    /**
+     *
+     * Grid wide paddings
+     *
+     */
+
+    &__inner--padding-kilo {
+        margin-top: -$spacing-kilo;
+    }
+
+    &__inner--padding-kilo > &__item {
+        padding-top: $spacing-kilo;
+    }
+}

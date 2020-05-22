@@ -1,0 +1,31 @@
+@import '../../styles/colors.scss';
+
+.header {
+    background-color: whitesmoke;
+    border-bottom: 5px solid $color-primary;
+    font-family: fantasy;
+    font-size: 20px;
+
+
+
+    &__container {
+        display: flex;
+        align-items: center;
+        height: 75px;
+    }
+
+    &__logo {
+        height: 60px;
+        width: 60px;
+        margin-right: 40px;
+    }
+
+    &__menu {
+        display: flex;
+        padding-left: 500px;
+
+        &__option {
+            padding-right: 30px;
+        }
+    }
+}
